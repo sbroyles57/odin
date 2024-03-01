@@ -1,0 +1,19 @@
+.normal, .cooler {
+  background-color: lightpink;
+  font-family: Verdana, DejaVu Sans, sans-serif;
+}
+
+#one {
+  color: blue;
+  font-size: 36px;
+}
+
+.cooler {
+  font-size: 24px;
+}
+
+#two {
+  background-color: lightgreen;
+  font-size: 24px;
+  font-weight: bold;
+}
