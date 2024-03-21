@@ -1,7 +1,7 @@
 @import url('https://urldefense.com/v3/__https://fonts.googleapis.com/css2?family=Roboto*Condensed:ital,wght@0,100..900;1,100..900&display=swap__;Kw!!O7uE89YCNVw!JOxweyNqrTmVspnD_PE0e3FrR8zQsetXNbcTLbAqWJMVgcibtsoOL_s9ohbDTW19uWltt-3yo7dMPivD4CCWO-3VGQ$ ');
 
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -19,42 +19,46 @@ body {
 
 .header {
     background-color: #1f2937;
-    color: white;
+    color: #f9faf8;
     display: flex;
     flex-direction: row;
 }
 
-.header h1 {
+.header > h4 {
   flex: 1;
-  margin-left: 12%;
+  padding-left: 12%;
+  font-size: 24px;
 }
 
-.header ul {
-  flex: 2;
+.header > ul {
+  flex: 1;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 12% 0 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 
-.header ul li {
-  /* flex: 1; */
+.header > ul > li {
+  font-size: 18px;
+  padding: 4px 16px;
 }
 
-.header ul li a {
+.header > ul > li > a {
   display: block;
   text-align: center;
   padding: 4px;
   text-decoration: none;
-  color: white;
+  color: #e5e7eb;
+  border-bottom: 2px solid #1f2937;
 }
 
-.header ul li a:hover {
-  border-bottom: 2px solid white;
+.header > ul > li > a:hover {
+  border-bottom: 2px solid #e5e7eb;
 }
+
 .content {
     display: flex;
     flex-direction: column;
@@ -64,15 +68,46 @@ body {
     display: flex;
     flex-direction: row;
     background-color: #1f2937;
-    color: white;
+
+}
+
+.main-title-left,
+.main-title-right {
+  flex: 1;
 }
 
 .main-title-left {
-    flex: 1;
+    padding-left: 12%;
+    padding-right: 5px;
 }
 
 .main-title-right {
-    flex: 1;
+    padding-left: 5px;
+    padding-right: 12%;
+}
+
+.main-title-left > p,
+.main-title-left > h1 {
+  margin: 5px 0;
+}
+
+.img-placeholder {
+  width: 525px;
+  height: 245px;
+  text-align: center;
+  background-color: #6D747D;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title-left > button {
+  background-color: #3882f6;
+  padding: 3px 24px;
+  color: #e5e7eb;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
 .quote {
