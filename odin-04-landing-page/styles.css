@@ -1,0 +1,103 @@
+@import url('https://urldefense.com/v3/__https://fonts.googleapis.com/css2?family=Roboto*Condensed:ital,wght@0,100..900;1,100..900&display=swap__;Kw!!O7uE89YCNVw!JOxweyNqrTmVspnD_PE0e3FrR8zQsetXNbcTLbAqWJMVgcibtsoOL_s9ohbDTW19uWltt-3yo7dMPivD4CCWO-3VGQ$ ');
+
+* {
+    border: 1px solid red;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.header h1 {
+  flex: 1;
+  margin-left: 12%;
+}
+
+.header ul {
+  flex: 2;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header ul li {
+  /* flex: 1; */
+}
+
+.header ul li a {
+  display: block;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  color: white;
+}
+
+.header ul li a:hover {
+  border-bottom: 2px solid white;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: row;
+    background-color: #1f2937;
+    color: white;
+}
+
+.main-title-left {
+    flex: 1;
+}
+
+.main-title-right {
+    flex: 1;
+}
+
+.quote {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote p {
+  width: 65%;
+}
+
+#thor {
+  text-align: right;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+}
