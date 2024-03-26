@@ -1,7 +1,7 @@
 @import url('https://urldefense.com/v3/__https://fonts.googleapis.com/css2?family=Roboto*Condensed:ital,wght@0,100..900;1,100..900&display=swap__;Kw!!O7uE89YCNVw!JOxweyNqrTmVspnD_PE0e3FrR8zQsetXNbcTLbAqWJMVgcibtsoOL_s9ohbDTW19uWltt-3yo7dMPivD4CCWO-3VGQ$ ');
 
 * {
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 body {
@@ -138,11 +138,13 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 5px 20px;
 }
 
 .info-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .info-img {
@@ -150,6 +152,10 @@ body {
   width: 150px;
   border: 4px solid #3882f6;
   border-radius: 20px;
+}
+
+.info-card > p {
+  text-align: center;
 }
 
 .quote {
@@ -177,4 +183,5 @@ body {
   background-color: #1f2937;
   color: white;
   text-align: center;
+  padding: 25px;
 }
