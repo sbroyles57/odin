@@ -8,8 +8,21 @@ function getComputerChoice() {
   return choices[getRandomInteger(0,2)];
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
+function getHumanChoice() {
+  let tmp = prompt("Rock, paper, scissors. 1, 2, 3, Go:");
+  let humanChoice = tmp.trim().toLowerCase();
+  console.log(humanChoice);
+  if(choices.includes(humanChoice)) {
+    return humanChoice;
+  }
+  else {
+    // entry error
+    return tmp;
+  }
+}
+
+// const playerSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
   if ( playerSelection === "paper" && computerSelection === "rock") {
@@ -30,10 +43,40 @@ function playRound(playerSelection, computerSelection) {
   else if ( computerSelection === "scissors" && playerSelection === "paper") {
     return computerSelection + " cut " + playerSelection + ". You loose."
   }
+  else if ( playerSelection === computerSelection ) {
+    return playerSelection + " = " + computerSelection + ". Tie.";
+  }
   else {
-    return playerSelection + " = " + computerSelection + ". Tie game.";
+    return "[ " + playerSelection + " ]" + " Entry error. Try again."
   }
 
 }
 
-console.log( playRound(playerSelection, computerSelection))
+function playGame() {
+  const roundCount = 5;
+  let humanScore = 0;
+  let computerScore = 0;
+  let tieCount = 0;
+
+  while( roundCount > 1 ) {
+    let result = playRound(getHumanChoice(), getComputerChoice());
+
+    console.log( result );
+
+    if( result.includes( "win" ) ) {
+
+      ++humanScore;
+    }
+    else if ( result.includes( "loose" ) ) {
+      ++computerScore;
+    }
+    else {
+      ++tieCount;
+    }   
+    --roundCount;
+    return "W-L-T: " + humanScore + "-" + computerScore + "-" + tieCount;
+  }
+
+  console.log( playGame(), `You ${ humanScore > computerScore ? ' won the game!' : ' did not win. :( '}` );
+}
+
