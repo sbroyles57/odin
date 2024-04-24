@@ -49,11 +49,9 @@ function playGame() {
   let tieCount = 0;
   let finalScore = "";
 
-
-  for( let roundCount = 0; roundCount < 5; roundCount++) {
-
+  for (let roundCount = 0; roundCount < 5; roundCount++) {
     result = playRound(getHumanChoice(), getComputerChoice());
-  
+
     console.log(result);
 
     if (result.includes("win")) {
@@ -65,17 +63,15 @@ function playGame() {
     } else {
       ++tieCount;
     }
-    // console.log(roundCount);    
+    // console.log(roundCount);
   }
   console.log("W-L-T: " + humanScore + "-" + computerScore + "-" + tieCount);
 
-  if(humanScore > computerScore) {
+  if (humanScore > computerScore) {
     return "You win!";
   } else {
     return "You did not win. :(";
   }
-
-
 }
 
 console.log(playGame());
