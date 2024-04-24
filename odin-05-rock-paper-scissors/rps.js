@@ -20,9 +20,6 @@ function getHumanChoice() {
   }
 }
 
-// const playerSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
-
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "paper" && computerSelection === "rock") {
     return playerSelection + " covers " + computerSelection + ". You win!";
@@ -47,7 +44,6 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
   let tieCount = 0;
-  let finalScore = "";
 
   for (let roundCount = 0; roundCount < 5; roundCount++) {
     result = playRound(getHumanChoice(), getComputerChoice());
