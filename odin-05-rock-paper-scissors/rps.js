@@ -11,7 +11,6 @@ function getComputerChoice() {
 function getHumanChoice() {
   let tmp = prompt("Rock, paper, scissors. 1, 2, 3, Go:");
   let humanChoice = tmp.trim().toLowerCase();
-  // console.log(humanChoice);
   if (choices.includes(humanChoice)) {
     return humanChoice;
   } else {
@@ -59,7 +58,6 @@ function playGame() {
     } else {
       ++tieCount;
     }
-    // console.log(roundCount);
   }
   console.log("W-L-T: " + humanScore + "-" + computerScore + "-" + tieCount);
 
