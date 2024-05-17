@@ -1,4 +1,5 @@
 const choices = ["rock", "paper", "scissors"];
+const roundCount = 5;
 
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -11,6 +12,7 @@ function getComputerChoice() {
 function getHumanChoice() {
   let tmp = prompt("Rock, paper, scissors. 1, 2, 3, Go:");
   let humanChoice = tmp.trim().toLowerCase();
+
   if (choices.includes(humanChoice)) {
     return humanChoice;
   } else {
@@ -44,28 +46,35 @@ function playGame() {
   let computerScore = 0;
   let tieCount = 0;
 
-  for (let roundCount = 0; roundCount < 5; roundCount++) {
+  for ( let i = 0; i < roundCount; ++i ) {
     result = playRound(getHumanChoice(), getComputerChoice());
 
     console.log(result);
 
     if (result.includes("win")) {
       ++humanScore;
-    } else if (result.includes("loose")) {
+    } 
+    
+    if (result.includes("loose")) {
       ++computerScore;
-    } else if (result.includes("error")) {
-      //skip round
-    } else {
+    } 
+    
+    if (result.includes("Tie")) {
       ++tieCount;
+    } 
+    
+    if (result.includes("error")) {
+      console.log(result);
     }
   }
+
   console.log("W-L-T: " + humanScore + "-" + computerScore + "-" + tieCount);
 
   if (humanScore > computerScore) {
-    return "You win!";
+    console.log("You win!");
   } else {
-    return "You did not win. :(";
+    console.log("You did not win. :(");
   }
 }
 
-console.log(playGame());
+playGame();
