@@ -49,8 +49,6 @@ function playGame() {
   for ( let i = 0; i < roundCount; ++i ) {
     result = playRound(getHumanChoice(), getComputerChoice());
 
-    console.log(result);
-
     if (result.includes("win")) {
       ++humanScore;
     } 
@@ -62,10 +60,7 @@ function playGame() {
     if (result.includes("Tie")) {
       ++tieCount;
     } 
-    
-    if (result.includes("error")) {
-      console.log(result);
-    }
+    console.log(result);
   }
 
   console.log("W-L-T: " + humanScore + "-" + computerScore + "-" + tieCount);
