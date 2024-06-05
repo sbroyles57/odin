@@ -10,10 +10,11 @@ const sumAll = function( start, end ) {
       return "ERROR";
     }
 
-    let tmpStart = ( start > end ) ? end : start; 
-    let tmpEnd = ( start < end ) ? end : start;
+    if( start < end ) {
+      [start, end] = [end, start];
+    }
 
-    for( let i = tmpStart; i <= tmpEnd; i++ ) {
+    for( let i = start; i <= end; i++ ) {
       result += i; 
     }
 
